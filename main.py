@@ -27,7 +27,7 @@ wb.save('updatedProduceSales.xlsx')
 # Create a pivot table
 df_produce = pd.read_excel("produceSales.xlsx")
 df_produce
-produce_pivot = df_produce.pivot_table(index="PRODUCE", aggfunc="sum")
+produce_pivot = df_produce.pivot_table(values="TOTAL", index="PRODUCE", aggfunc="sum")
 
 # Save it to a new excel workbook
 produce_pivot.to_excel('pivot_table.xlsx')
